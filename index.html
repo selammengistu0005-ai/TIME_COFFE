@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIME Coffee House</title>
     
-    <!-- 1. EXTERNAL RESOURCES (Fonts & Icons) -->
+    <!-- EXTERNAL RESOURCES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- 2. CSS SETTINGS (Tailwind CDN & Custom Config) -->
+    <!-- TAILWIND CDN & CONFIG -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -31,33 +31,10 @@
         }
     </script>
 
-    <!-- 3. CUSTOM CSS (Animations & Global Styles) -->
-    <style>
-        body { font-family: 'Poppins', sans-serif; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
-        
-        /* Scroll reveal animation */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .fade-in-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Floating element animation */
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-        .animate-float { animation: float 4s ease-in-out infinite; }
-    </style>
+    <!-- CUSTOM CSS (You will ask for this next) -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<!-- 4. HTML BODY (Structure) -->
 <body class="bg-white text-gray-800 antialiased overflow-x-hidden">
 
     <!-- Navigation Bar -->
@@ -86,7 +63,7 @@
             </div>
         </div>
 
-        <!-- Mobile Menu (Hidden by default) -->
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block px-3 py-2 text-gray-600 hover:text-brand-green font-medium">Home</a>
@@ -103,7 +80,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 
-                <!-- Text Content -->
                 <div class="w-full md:w-1/2 pt-12 md:pt-0 fade-in-up">
                     <h1 class="text-5xl md:text-7xl font-heading font-bold text-gray-900 leading-tight mb-6">
                         Welcome to <br> <span class="text-brand-green">TIME</span> Coffee House
@@ -117,13 +93,11 @@
                     </div>
                 </div>
 
-                <!-- Image Content -->
                 <div class="w-full md:w-1/2 mt-12 md:mt-0 relative fade-in-up" style="transition-delay: 200ms;">
                     <div class="relative w-full max-w-lg mx-auto">
                         <div class="absolute inset-0 bg-brand-green rounded-full opacity-10 blur-3xl transform scale-110"></div>
                         <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80" alt="Fresh Pour Over Coffee" class="relative z-10 w-full h-[500px] object-cover rounded-[40px] shadow-2xl">
                         
-                        <!-- Floating element -->
                         <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl z-20 flex items-center gap-4 animate-float">
                             <div class="bg-brand-beige p-3 rounded-full text-brand-green">
                                 <i class="fa-solid fa-mug-hot"></i>
@@ -172,7 +146,6 @@
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
-                <!-- Features -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 text-center fade-in-up border border-gray-50">
                     <div class="w-16 h-16 mx-auto bg-brand-beige rounded-full flex items-center justify-center text-brand-green text-2xl mb-4">
                         <i class="fa-solid fa-seedling"></i>
@@ -229,7 +202,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Menu Items -->
                 <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 fade-in-up">
                     <div class="h-60 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1579992357154-faf4bde95b3d?auto=format&fit=crop&w=600&q=80" alt="Espresso" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -359,7 +331,6 @@
     <footer class="bg-brand-green text-white pt-20 pb-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-8">
-                <!-- Brand Info -->
                 <div class="text-center md:text-left">
                     <span class="font-heading font-bold text-3xl tracking-wider mb-2 block">TIME<br><span class="text-xl font-body font-light text-brand-beige">Coffee House</span></span>
                     <p class="text-green-100 font-light text-sm max-w-sm mt-4">
@@ -367,7 +338,6 @@
                     </p>
                 </div>
 
-                <!-- Social Media Icons (Inactive Placeholders) -->
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="javascript:void(0)" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white hover:text-brand-green transition-all duration-300 transform hover:scale-110 shadow-sm">
                         <i class="fa-brands fa-instagram text-xl"></i>
@@ -387,7 +357,6 @@
                 </div>
             </div>
 
-            <!-- Footer Bottom -->
             <div class="border-t border-green-700/50 pt-8 flex flex-col md:flex-row justify-between items-center text-sm font-light text-green-200">
                 <p>&copy; 2026 TIME Coffee House. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
@@ -398,47 +367,7 @@
         </div>
     </footer>
 
-    <!-- 5. JAVASCRIPT (Interactivity & Animations) -->
-    <script>
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Sticky Navbar Style Change on Scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-md');
-                navbar.classList.replace('bg-white/90', 'bg-white/95');
-            } else {
-                navbar.classList.remove('shadow-md');
-                navbar.classList.replace('bg-white/95', 'bg-white/90');
-            }
-        });
-
-        // Intersection Observer for Scroll Animations (Fade in up)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Run once
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in-up').forEach((elem) => {
-            observer.observe(elem);
-        });
-    </script>
+    <!-- CUSTOM JS (You will ask for this next) -->
+    <script src="script.js"></script>
 </body>
 </html>
